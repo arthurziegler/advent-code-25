@@ -18,7 +18,7 @@ def main():
         for i, line in enumerate(paper_matrix):
             for j, cell in enumerate(line):
                 paper_count = 0
-                print(f"Matrix Position: {cell} [{i},{j}]")
+                #print(f"Matrix Position: {cell} [{i},{j}]")
 
                 if paper_matrix[i, j] == '@':
                     paper_matrix[i, j] = 'X'
@@ -30,8 +30,8 @@ def main():
                     paper_count = neighborhood.flatten()
                     paper_count = paper_count == '@'
                     paper_count = np.sum(paper_count)
-                    print(f"Line:{l_start}, {l_end} Column: {c_start}, {c_end} Count = {paper_count}")
-                    print(neighborhood)
+                    #print(f"Line:{l_start}, {l_end} Column: {c_start}, {c_end} Count = {paper_count}")
+                    #print(neighborhood)
                     #paper_matrix[i, j] = '@'
                     if paper_count < 4:
                         available_paper_rolls += 1
